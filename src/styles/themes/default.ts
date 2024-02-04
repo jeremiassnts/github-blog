@@ -10,4 +10,5 @@ export const defaultTheme = {
     'text': '#AFC2D4',
     'subtitle': '#C4D4E3',
     'title': '#E7EDF4',
+    'border-radius': '8px'
 }

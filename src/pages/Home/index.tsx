@@ -1,6 +1,7 @@
-import { Buildings, GithubLogo, User } from "phosphor-react"
+import { ArrowSquareOut, ArrowSquareUp, Buildings, GithubLogo, User } from "phosphor-react"
 import { z } from "zod"
 import { Avatar, HomeContainer, IconInfoContainer, IconInfoItem, UserBio, UserInfoCard, UserInfoHeader, UserInformations } from "./style"
+import { defaultTheme } from "../../styles/themes/default"
 
 const githubUserSchema = z.object({
     login: z.string(),
@@ -55,20 +56,20 @@ export function Home() {
                 <UserInformations>
                     <UserInfoHeader>
                         <span>{name}</span>
-                        <a href={html_url}></a>
+                        <a target="_blank" href={html_url}>GITHUB <ArrowSquareOut size={15} /></a>
                     </UserInfoHeader>
                     <UserBio>{bio}</UserBio>
                     <IconInfoContainer>
                         <IconInfoItem>
-                            <GithubLogo weight="fill" size={20} />
+                            <GithubLogo color={defaultTheme.label} weight="fill" size={20} />
                             <span>{login}</span>
                         </IconInfoItem>
                         <IconInfoItem>
-                            <Buildings weight="fill" size={20} />
+                            <Buildings color={defaultTheme.label} weight="fill" size={20} />
                             <span>{company}</span>
                         </IconInfoItem>
                         <IconInfoItem>
-                            <User weight="fill" size={20} />
+                            <User color={defaultTheme.label} weight="fill" size={20} />
                             <span>{followers} seguidores</span>
                         </IconInfoItem>
                     </IconInfoContainer>

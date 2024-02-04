@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export const GlobalStyle = createGlobalStyle`
     * {

@@ -26,6 +26,7 @@ export const UserInformations = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
 `
 export const UserInfoHeader = styled.div`
     display: flex;

@@ -12,7 +12,8 @@ interface RepositoryPostProps {
 }
 export function RepositoryPost({ number, title, date, content }: RepositoryPostProps) {
     const limit = 300
-    const showingContent = content.slice(0, limit) + (content.length > limit ? '...' : '')
+    content = content ?? ''
+    const showingContent = `${(content.length > limit ? content.slice(0, limit) : content)}${(content.length > limit ? '...' : '')}`
     const navigate = useNavigate()
 
     function handleAccessPostDetails() {

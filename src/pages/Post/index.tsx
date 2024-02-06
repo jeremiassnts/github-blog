@@ -31,7 +31,6 @@ export function Post() {
 
     async function getAccessDetails() {
         const { data } = await api.get(`repos/${username}/${repository}/issues/${id}`)
-        console.log(data)
         setPost(data)
         setLoading(false)
     }
